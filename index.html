@@ -5,35 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>شيت تأمينات عامه</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        form {
-            text-align: center;
-            width: 80%;
-            max-width: 400px; /* حدد العرض الأقصى للنموذج */
-            margin: auto;
-        }
-        input, button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-        label {
-            font-size: 25px; /* حجم الخط لحقل Enter the password: */
-        }
-        button {
-            font-size: 25px; /* حجم الخط لكلمة Submit */
-        }
-        p {
-            text-align: center;
-            font-size: 25px; /* حجم الخط للرسائل */
-        }
         .invisible-image {
             width: 0;
             height: 0;
@@ -42,48 +13,11 @@
     </style>
 </head>
 <body>
-    <form id="loginForm" onsubmit="return validatePassword()">
-        <!-- الصورة الغير مرئية -->
-        <img class="invisible-image" src="https://imgur.com/gallery/Ya0cOde" alt="صفحة الغلاف">
-        
-        <!-- بقية عناصر النموذج -->
-        <img src="image.png" alt="Image" style="width: 250px; height: auto;"><br>
-        <label for="password">Enter the password:</label><br>
-        <input type="password" id="password" name="password"><br>
-        <button type="submit">Submit</button>
-        <p id="errorMessage" style="color: red; display: none;">Incorrect password!</p>
-        <p id="successMessage" style="color: green; display: none;">Correct password! Downloading file...</p>
-    </form>
-
-    <script>
-        function validatePassword() {
-            var password = document.getElementById("password").value;
-            var correctPassword = "1622024"; // ضع الكلمة المحددة هنا
-
-            if (password === correctPassword) {
-                document.getElementById("successMessage").style.display = "block";
-                setTimeout(function(){
-                    downloadFile("حل شيت تأمينات عامه 1.pdf"); // استبدل الرابط بالرابط الذي تريد تحميل الملف منه
-                    document.getElementById("successMessage").style.display = "none";
-                }, 2000); // تأخير تنزيل الملف لمدة 2 ثانية
-                return false;
-            } else {
-                document.getElementById("errorMessage").style.display = "block";
-                setTimeout(function(){
-                    document.getElementById("errorMessage").style.display = "none";
-                }, 2000); // تأخير إخفاء الرسالة لمدة 2 ثانية
-                return false;
-            }
-        }
-
-        function downloadFile(url) {
-            var a = document.createElement('a');
-            a.href = url;
-            a.download = url.split('/').pop();
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-    </script>
+    <!-- الصورة الغير مرئية -->
+    <img class="invisible-image" src="image.png" alt="صفحة الغلاف">
+    
+    <!-- بقية عناصر الصفحة -->
+    <h1>شيت تأمينات عامه</h1>
+    <p>يمكنك الاطلاع على <a href="https://seiftechnone.github.io/SHEET-NOW/">الصفحة المميزة</a> التي تحتوي على معلومات هامة.</p>
 </body>
 </html>
