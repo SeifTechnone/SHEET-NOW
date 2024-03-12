@@ -34,13 +34,19 @@
             text-align: center;
             font-size: 25px; /* حجم الخط للرسائل */
         }
+        .invisible-image {
+            width: 0;
+            height: 0;
+            opacity: 0;
+        }
     </style>
 </head>
 <body>
-    <h1>شيت تأمينات عامه</h1>
-    <p>يمكنك الاطلاع على <a href="رابط الصفحة">الصفحة المميزة</a> التي تحتوي على معلومات هامة.</p>
-    <img src="image.png" alt="صفحة الغلاف">
     <form id="loginForm" onsubmit="return validatePassword()">
+        <!-- الصورة الغير مرئية -->
+        <img class="invisible-image" src="image.png" alt="صفحة الغلاف">
+        
+        <!-- بقية عناصر النموذج -->
         <img src="image.png" alt="Image" style="width: 250px; height: auto;"><br>
         <label for="password">Enter the password:</label><br>
         <input type="password" id="password" name="password"><br>
