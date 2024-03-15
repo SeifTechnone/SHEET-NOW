@@ -3,56 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحتي</title>
-    <meta name="description" content="وصف صفحتك هنا">
-    <meta property="og:title" content="عنوان صفحتك هنا">
-    <meta property="og:description" content="وصف صفحتك هنا">
-    <meta property="og:image" content="رابط الصورة المصغرة هنا">
+    <title>شيت تأمينات عامه</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="وصف صفحتك هنا">
+    <meta property="og:title" content="حل شيت تأمينات عامه">
+    <meta property="og:description" content="هدف عرض حل شيت للطالب من اجل فهم وادراك حل خاص به">
+    <meta property="og:image" content="https://i.imgur.com/cOk6eAU.jpeg">
     <style>
-        /* تخفيض عرض الصفحة الثانية */
-        .second-page {
-            display: none;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            text-align: center;
+            width: 80%;
+            max-width: 400px; /* حدد العرض الأقصى للنموذج */
+            margin: auto;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        label {
+            font-size: 25px; /* حجم الخط لحقل Enter the password: */
+        }
+        button {
+            font-size: 25px; /* حجم الخط لكلمة Submit */
+        }
+        p {
+            text-align: center;
+            font-size: 25px; /* حجم الخط للرسائل */
         }
     </style>
 </head>
 <body>
-    <!-- محتوى الصفحة الأولى -->
-    <h1>مرحبًا بك في صفحتي!</h1>
-    <p>هذا المكان لعرض المحتوى الخاص بك.</p>
+    <!-- محتوى صفحتك -->
+    <form id="loginForm" onsubmit="return validatePassword()">
+        <img src="image.png" alt="Image" style="width: 250px; height: auto;"><br>
+        <label for="password">Enter the password:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <button type="submit">Submit</button>
+        <p id="errorMessage" style="color: red; display: none;">Incorrect password!</p>
+        <p id="successMessage" style="color: green; display: none;">Correct password! Downloading file...</p>
+    </form>
 
-    <!-- تبديل بين الصفحتين -->
-    <div class="first-page">
-        <form id="loginForm" onsubmit="return validatePassword()">
-            <a href="index2.html">
-                <img src="Logo.png" alt="Image" style="width: 250px; height: auto;">
-            </a><br>
-            <label for="password">Enter the password:</label><br>
-            <input type="password" id="password" name="password"><br>
-            <button type="submit">Submit</button>
-            <p id="errorMessage" style="color: black; display: none;">Incorrect password!</p>
-            <p id="successMessage" style="color: black; display: none;">Correct password! Downloading file...</p>
-        </form>
-    </div>
-
-    <!-- السكريبت -->
     <script>
         function validatePassword() {
             var password = document.getElementById("password").value;
-            var correctPassword1 = "1622024"; // كلمة المرور الأولى
-            var correctPassword2 = "2922024"; // كلمة المرور الثانية
+            var correctPassword = "162202402"; // ضع الكلمة المحددة هنا
 
-            if (password === correctPassword1) {
+            if (password === correctPassword) {
                 document.getElementById("successMessage").style.display = "block";
                 setTimeout(function(){
-                    downloadFile("حل شيت تأمينات عامه 1.pdf"); // رابط الملف المراد تنزيله لكلمة المرور الأولى
-                    document.getElementById("successMessage").style.display = "none";
-                }, 2000); // تأخير تنزيل الملف لمدة 2 ثانية
-                return false;
-            } else if (password === correctPassword2) {
-                document.getElementById("successMessage").style.display = "block";
-                setTimeout(function(){
-                    downloadFile("حل شيت تأمينات عامه 2.pdf"); // رابط الملف المراد تنزيله لكلمة المرور الثانية
+                    downloadFile("حل شيت تأمينات عامه 1.pdf"); // استبدل الرابط بالرابط الذي تريد تحميل الملف منه
                     document.getElementById("successMessage").style.display = "none";
                 }, 2000); // تأخير تنزيل الملف لمدة 2 ثانية
                 return false;
