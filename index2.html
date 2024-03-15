@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صفحة الصورة</title>
+<style>
+  @font-face {
+    font-family: 'CustomFont'; /* اسم الخط الذي ستستخدمه في CSS */
+    src: url('HACKED.ttf'); /* مسار الملف الخاص بالخط */
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #000000; /* لون خلفية الصفحة (أسود) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* تأكد من أن الصورة المستطيلة تكون موجودة داخل الجسم */
+  }
+
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* تحديد الترتيب في الطبقات لجعل الصورة كخلفية */
+    opacity: 0.5; /* درجة الشفافية */
+  }
+
+  .thumbnails-container {
+    display: flex;
+    flex-direction: column; /* تحديد ترتيب العناصر عموديًا */
+    align-items: center; /* محاذاة العناصر بالمنتصف عموديًا */
+  }
+
+  .thumbnail {
+    width: 200px; /* عرض الصورة المصغرة */
+    height: auto; /* يتم تعديل ارتفاعها تلقائيًا بناءً على العرض */
+    position: relative; /* تأكد من عرض الصورة المصغرة فوق الصورة الخلفية */
+    z-index: 2; /* لتحديد الترتيب في الطبقات */
+  }
+
+  .caption {
+    font-family: 'CustomFont', Arial, sans-serif; /* استخدام الخط المحمل */
+    position: absolute;
+    bottom: 20px; /* المسافة من الأسفل */
+    color: #FFFFFF; /* لون النص */
+    z-index: 2; /* لتحديد الترتيب في الطبقات */
+  }
+
+  .link-image {
+    width: 200px; /* تحديد عرض الصورة المستطيلة */
+    height: auto; /* يتم تعديل ارتفاعها تلقائيًا بناءً على العرض */
+    z-index: 1; /* لضمان عرض الصورة المستطيلة أسفل الصورة المصغرة والخلفية */
+  }
+</style>
+</head>
+<body>
+  <img class="background-image" src="Seif.png" alt="Background Image">
+  <div class="thumbnails-container">
+    <a href="index1.html">
+      <img class="thumbnail" src="Logo.png" alt="صورة مصغرة">
+    </a>
+    <div class="caption">Seif Technoon website developer</div>
+    <a href="https://wa.me/+201070251242">
+      <img class="link-image" src="WA.png" alt="صورة مستطيلة">
+    </a>
+  </div>
+</body>
+</html>
