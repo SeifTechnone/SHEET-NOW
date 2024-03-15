@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>شيت تأمينات عامه</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta name="description" content="وصف صفحتك هنا">
-    <meta property="og:title" content="حل شيت تأمينات عامه">
-    <meta property="og:description" content="هدف عرض حل شيت للطالب من اجل فهم وادراك حل خاص به">
-    <meta property="og:image" content="https://i.imgur.com/cOk6eAU.jpeg">
     <style>
+        @font-face {
+            font-family: MyCustomFont;
+            src: url('HACKED.ttf') format('truetype'); /* استبدل 'path/to/your/font.ttf' بمسار ملف الخط الخاص بك */
+        }
+
         body {
+            font-family: MyCustomFont, Arial, sans-serif; /* استخدام الخط المخصص مع خيارات الفونت البديلة */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            background-color: #FF5000; /* تغيير لون الخلفية إلى #FF5000 */
         }
         form {
             text-align: center;
@@ -28,39 +30,60 @@
             padding: 10px;
             margin-bottom: 10px;
             box-sizing: border-box;
+            border-radius: 20px; /* زاوية مستديرة */
         }
         label {
             font-size: 25px; /* حجم الخط لحقل Enter the password: */
+            color: #FFFFFF; /* تلوين الكلمة بلون أبيض */
         }
         button {
             font-size: 25px; /* حجم الخط لكلمة Submit */
+            color: #FFFFFF; /* تلوين الكلمة بلون أبيض */
+            background-color: black; /* لون خلفية الزر */
+            font-family: "MyCustomFont"; /* تحديد شكل الخط */
         }
         p {
             text-align: center;
             font-size: 25px; /* حجم الخط للرسائل */
+            color: #FFFFFF; /* تلوين الكلمة بلون أبيض */
         }
     </style>
+    <!-- العلامات الجديدة -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="وصف صفحتك هنا">
+    <meta property="og:title" content="شيت مان رجل شتات حل شيت تأمينات عامه">
+    <meta property="og:description" content="هدف عرض حل شيت للطالب من اجل فهم وادراك حل">
+    <meta property="og:image" content="https://i.imgur.com/XyYhNjm.jpeg">
 </head>
 <body>
-    <!-- محتوى صفحتك -->
     <form id="loginForm" onsubmit="return validatePassword()">
-        <img src="image.png" alt="Image" style="width: 250px; height: auto;"><br>
+        <a href="index2.html">
+            <img src="Logo.png" alt="Image" style="width: 250px; height: auto;">
+        </a><br>
         <label for="password">Enter the password:</label><br>
         <input type="password" id="password" name="password"><br>
         <button type="submit">Submit</button>
-        <p id="errorMessage" style="color: red; display: none;">Incorrect password!</p>
-        <p id="successMessage" style="color: green; display: none;">Correct password! Downloading file...</p>
+        <p id="errorMessage" style="color: black; display: none;">Incorrect password!</p>
+        <p id="successMessage" style="color: black; display: none;">Correct password! Downloading file...</p>
     </form>
 
     <script>
         function validatePassword() {
             var password = document.getElementById("password").value;
-            var correctPassword = "162202402"; // ضع الكلمة المحددة هنا
+            var correctPassword1 = "1622024"; // كلمة المرور الأولى
+            var correctPassword2 = "2922024"; // كلمة المرور الثانية
 
-            if (password === correctPassword) {
+            if (password === correctPassword1) {
                 document.getElementById("successMessage").style.display = "block";
                 setTimeout(function(){
-                    downloadFile("حل شيت تأمينات عامه 1.pdf"); // استبدل الرابط بالرابط الذي تريد تحميل الملف منه
+                    downloadFile("حل شيت تأمينات عامه 1.pdf"); // رابط الملف المراد تنزيله لكلمة المرور الأولى
+                    document.getElementById("successMessage").style.display = "none";
+                }, 2000); // تأخير تنزيل الملف لمدة 2 ثانية
+                return false;
+            } else if (password === correctPassword2) {
+                document.getElementById("successMessage").style.display = "block";
+                setTimeout(function(){
+                    downloadFile("حل شيت تأمينات عامه 2.pdf"); // رابط الملف المراد تنزيله لكلمة المرور الثانية
                     document.getElementById("successMessage").style.display = "none";
                 }, 2000); // تأخير تنزيل الملف لمدة 2 ثانية
                 return false;
