@@ -6,70 +6,36 @@
     <title>صفحتي</title>
     <meta name="description" content="وصف صفحتك هنا">
     <meta property="og:title" content="عنوان صفحتك هنا">
-    <meta property="og:description" content="تسريب حل شيتات">
-    <meta property="og:image" content="https://i.imgur.com/XyYhNjm.jpeg">
+    <meta property="og:description" content="وصف صفحتك هنا">
+    <meta property="og:image" content="رابط الصورة المصغرة هنا">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
-        @font-face {
-            font-family: MyCustomFont;
-            src: url('HACKED.ttf') format('truetype'); /* استبدل 'path/to/your/font.ttf' بمسار ملف الخط الخاص بك */
-        }
-
-        body {
-            font-family: MyCustomFont, Arial, sans-serif; /* استخدام الخط المخصص مع خيارات الفونت البديلة */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #FF5000; /* تغيير لون الخلفية إلى #FF5000 */
-        }
-        form {
-            text-align: center;
-            width: 80%;
-            max-width: 400px; /* حدد العرض الأقصى للنموذج */
-            margin: auto;
-        }
-        input, button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-            border-radius: 20px; /* زاوية مستديرة */
-        }
-        label {
-            font-size: 25px; /* حجم الخط لحقل Enter the password: */
-            color: #FFFFFF; /* تلوين الكلمة بلون أبيض */
-        }
-        button {
-            font-size: 25px; /* حجم الخط لكلمة Submit */
-            color: #FFFFFF; /* تلوين الكلمة بلون أبيض */
-            background-color: black; /* لون خلفية الزر */
-            font-family: "MyCustomFont"; /* تحديد شكل الخط */
-        }
-        p {
-            text-align: center;
-            font-size: 25px; /* حجم الخط للرسائل */
-            color: #FFFFFF; /* تلوين الكلمة بلون أبيض */
+        /* تخفيض عرض الصفحة الثانية */
+        .second-page {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <!-- محتوى صفحتك -->
+    <!-- محتوى الصفحة الأولى -->
     <h1>مرحبًا بك في صفحتي!</h1>
     <p>هذا المكان لعرض المحتوى الخاص بك.</p>
 
-    <form id="loginForm" onsubmit="return validatePassword()">
-        <a href="index2.html">
-            <img src="Logo.png" alt="Image" style="width: 250px; height: auto;">
-        </a><br>
-        <label for="password">Enter the password:</label><br>
-        <input type="password" id="password" name="password"><br>
-        <button type="submit">Submit</button>
-        <p id="errorMessage" style="color: black; display: none;">Incorrect password!</p>
-        <p id="successMessage" style="color: black; display: none;">Correct password! Downloading file...</p>
-    </form>
+    <!-- تبديل بين الصفحتين -->
+    <div class="first-page">
+        <form id="loginForm" onsubmit="return validatePassword()">
+            <a href="index2.html">
+                <img src="Logo.png" alt="Image" style="width: 250px; height: auto;">
+            </a><br>
+            <label for="password">Enter the password:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <button type="submit">Submit</button>
+            <p id="errorMessage" style="color: black; display: none;">Incorrect password!</p>
+            <p id="successMessage" style="color: black; display: none;">Correct password! Downloading file...</p>
+        </form>
+    </div>
 
+    <!-- السكريبت -->
     <script>
         function validatePassword() {
             var password = document.getElementById("password").value;
